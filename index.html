@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="icon" href="ikon/css.png">
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="fontawesome/css/brands.css">
@@ -39,6 +38,8 @@
     <style>
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         /* Mengatur layout responsif */
@@ -60,6 +61,19 @@
             h1, h4, p {
                 font-size: 16px;
                 text-align: center;
+            }
+
+            /* Navbar toggle untuk mobile */
+            .navbar-toggler {
+                border-color: #fff;
+            }
+
+            .navbar-collapse {
+                text-align: center;
+            }
+
+            .navbar-nav li {
+                margin: 10px 0;
             }
         }
 
@@ -96,6 +110,7 @@
             padding: 15px;
             border: 7px solid black;
             text-align: center;
+            margin: 15px;
         }
 
         #skill:hover {
@@ -202,14 +217,17 @@
 <body>
     <!-- Header -->
     <header class="main-header" id="thisisnavbar">
-        <nav class="navbar header-nav navbar-expand-sm bg-dark sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div class="container">
                 <a href="#" class="navbar-brand">
                     <h4 class="mb-0 text-light">Ade <span class="text-danger">Abdilah</span></h4>
                 </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Menu -->
-                <div class="justify-content-end" id="navbar-collapse-toogle">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto gap-3">
                         <li><a id="navbartext" href="#section1" class="nav-link">Home</a></li>
                         <li><a id="navbartext" href="#section2" class="nav-link">About</a></li>
@@ -233,7 +251,7 @@
                 <div id="anim-element"><i class='bx bx-color' style='color:#ffffff'></i></div>
             </div>
             <div class="container mt-5 mb-5">
-                <img src="ikon/ADE.png" alt="fotoade" class="mt-5" style="height: 400px;">
+                <img src="ikon/ADE.png" alt="fotoade" class="mt-5" style="width: 100%; height: auto;">
             </div>
 
             <div class="container">
@@ -245,8 +263,16 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <p class="text-center text-light py-3">&copy; 2024 Muhamad Ade Abdilah</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
       <div class="mt-5 mb-5" id="section2">
     <div class="d-flex justify-content-center">
