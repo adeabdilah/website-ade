@@ -75,6 +75,25 @@
             .navbar-nav li {
                 margin: 10px 0;
             }
+
+            /* Mengatur gambar dan teks untuk mobile */
+            .profile-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            .profile-container img {
+                width: 80%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .profile-container h1, .profile-container p {
+                text-align: center;
+            }
         }
 
         /* Responsif untuk tampilan lebih besar */
@@ -100,6 +119,23 @@
 
             p {
                 font-size: 18px; /* Ukuran font untuk desktop */
+            }
+
+            .profile-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 40px;
+            }
+
+            .profile-container img {
+                width: 40%;
+                margin-right: 30px;
+            }
+
+            .profile-container h1, .profile-container p {
+                text-align: left;
             }
         }
 
@@ -242,36 +278,23 @@
     </header>
 
     <main class="bg-dark pb-3">
-        <div class="container d-flex align-items-center" id="section1">
-            <div id="anim-elements">
-                <div id="anim-element"><i class='bx bxl-html5' style='color:#ffffff'></i></div>
-                <div id="anim-element"><i class='bx bxl-css3' style='color:#ffffff'></i></div>
-                <div id="anim-element"><i class='bx bxl-java' style='color:#ffffff'></i></div>
-                <div id="anim-element"><i class='bx bx-code-block' style='color:#ffffff'></i></div>
-                <div id="anim-element"><i class='bx bx-color' style='color:#ffffff'></i></div>
-            </div>
-            <div class="container mt-5 mb-5">
-                <img src="ikon/ADE.png" alt="fotoade" class="mt-5" style="width: 100%; height: auto;">
-            </div>
-
-            <div class="container">
-                <h4 class="text-light">Hello, <span class="text-danger">My Name</span> is</h4>
-                <h1 class="text-light">Muhammad Ade Abdilah</h1>
-                <p class="text-light">
-                    Saya adalah seorang mahasiswa Universitas Yatsi Madani yang berasal dari Kabupaten Tangerang, Banten, Indonesia. Saya memiliki minat besar di bidang ilmu komputer dan teknologi bisnis, dengan fokus pada bagaimana teknologi dapat mendukung efisiensi operasional dan inovasi dalam dunia bisnis. Dengan latar belakang pengalaman kerja dan pendidikan yang saya miliki, saya bercita-cita untuk mengintegrasikan keahlian teknis dan strategi bisnis demi menciptakan solusi yang bermanfaat.
-                </p>
+        <div class="container" id="section1">
+            <div class="profile-container">
+                <img src="ikon/ADE.png" alt="fotoade">
+                <div>
+                    <h4 class="text-light">Hello, <span class="text-danger">My Name</span> is</h4>
+                    <h1 class="text-light">Muhammad Ade Abdilah</h1>
+                    <p class="text-light">Saya adalah seorang mahasiswa Universitas Yatsi Madani yang berasal dari Kabupaten Tangerang, Banten, Indonesia. Saya memiliki minat besar di bidang ilmu komputer dan teknologi bisnis, dengan fokus pada bagaimana teknologi dapat mendukung efisiensi operasional dan inovasi dalam dunia bisnis. Dengan latar belakang pengalaman kerja dan pendidikan yang saya miliki, saya bercita-cita untuk mengintegrasikan keahlian teknis dan strategi bisnis demi menciptakan solusi yang bermanfaat.</p>
+                </div>
             </div>
         </div>
     </main>
-
-    <footer>
-        <p class="text-center text-light py-3">&copy; 2024 Muhamad Ade Abdilah</p>
-    </footer>
-
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
       <div class="mt-5 mb-5" id="section2">
