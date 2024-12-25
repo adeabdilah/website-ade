@@ -5,83 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="icon" href="ikon/css.png">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="fontawesome/css/brands.css">
-    <link rel="stylesheet" href="fontawesome/css/solid.css">
-    <link rel="stylesheet" href="fontawesome/css/regular.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <style>
-        body{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
         }
 
-        #skill{
-            color: #ffffff;
-            font-weight: 500;
-            padding: 15px;
-            border: 7px solid black;
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #000;
         }
 
-        #skill:hover{
-            padding: 17px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
-        }
-        
-        #service{
-            padding: 5px;
-            margin-bottom: 20px;
-            border: 7px solid rgb(0, 0, 0);
-        }
-
-        #gambarservice{
-            font-size: 100px;
-            margin: 0 10px;
-        }
-
-        #navbartext{
+        #navbartext {
             position: relative;
             text-decoration: none;
             color: white;
         }
 
-        #navbartext:after{
-            content: ""; /* Elemen kosong untuk underline */
+        #navbartext:after {
+            content: "";
             position: absolute;
             left: auto;
             right: 0;
-            bottom: 0; /* Jarak dari teks */
+            bottom: 0;
             height: 2px;
-            width: 0; /* Ketebalan underline */
-            background-color: rgb(255, 0, 0); /* Warna underline */
-            transition: all 0.3s ease; /* Efek transisi */
+            width: 0;
+            background-color: rgb(255, 0, 0);
+            transition: all 0.3s ease;
         }
 
-        #navbartext:hover{
+        #navbartext:hover {
             color: rgb(255, 0, 0);
         }
 
-        #navbartext:hover:after{
+        #navbartext:hover:after {
             left: 0;
             right: auto;
             width: 100%;
         }
 
-        #thisisnavbar{
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            position: sticky;
-        }
-
-        #anim-elements{
+        #anim-elements {
             position: absolute;
             top: 0;
             left: 0;
@@ -91,133 +61,134 @@
             z-index: 0;
         }
 
-        #anim-elements #anim-element{
+        #anim-elements #anim-element {
             position: absolute;
             font-size: 30px;
         }
 
-        #anim-elements #anim-element:nth-child(1){
-            top: 12%;
-            left: 20%;
-            color: #ffffff;
-            animation: anione 13s infinite linear alternate;
-        }
-
-        #anim-elements #anim-element:nth-child(2){
-            top: 36%;
-            left: 15%;
-            color: #ffffff;
-            animation: anione 13s infinite linear alternate;
-        }
-
-        #anim-elements #anim-element:nth-child(3){
-            top: 40%;
-            left: 30%;
-            color: #ffffff;
-            animation: anione 13s infinite linear alternate;
-        }
-
-        #anim-elements #anim-element:nth-child(4){
-            top: 50%;
-            left: 40%;
-            color: #ffffff;
-            animation: anione 13s infinite linear alternate;
-        }
-
-        #anim-elements #anim-element:nth-child(5){
-            top: 25%;
-            left: 55%;
-            color: #ffffff;
+        #anim-elements #anim-element:nth-child(odd) {
             animation: anione 13s infinite linear alternate;
         }
 
         @keyframes anione {
-            0% {transform: translate(0, 0) rotate(0);}
-            40% {transform: translate(141px, 72px) rotate(75deg);}
-            80% {transform: translate(-40px, 72px) rotate(145deg);}
-            100% {transform: translate(0, 0) rotate(0);}
+            0% { transform: translate(0, 0) rotate(0); }
+            40% { transform: translate(141px, 72px) rotate(75deg); }
+            80% { transform: translate(-40px, 72px) rotate(145deg); }
+            100% { transform: translate(0, 0) rotate(0); }
         }
 
-        #fotoporto{
-            margin: 18px 0;
-            width: 80%;
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
-        footer{
-            padding: 0;
-            margin: 0;
+        footer {
+            padding: 10px 0;
             background: #4e4e4e;
+            text-align: center;
+            color: #fff;
         }
 
+        /* Responsif untuk HP */
+        @media (max-width: 768px) {
+            #anim-elements #anim-element {
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h4 {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            header .navbar-brand h4 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Responsif untuk perangkat lebih kecil */
+        @media (max-width: 576px) {
+            #anim-elements #anim-element {
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            header .navbar-brand h4 {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 
 <body>
     <!-- Header -->
-    <header class="main-header" id="thisisnavbar">
-        <nav class="navbar header-nav navbar-expand-sm bg-dark sticky-top">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a href="#" class="navbar-brand">
-                    <h4 class="mb-0 text-light">Ade <span class="text-danger">Abdilah</span></h4>
+                    <h4>Ade <span class="text-danger">Abdilah</span></h4>
                 </a>
-
-                <!-- Menu -->
-                <div class="justify-content-end" id="navbar-collapse-toogle">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
                     <ul class="navbar-nav mx-auto gap-3">
-                        <li>
-                            <a id="navbartext" href="#section1" class="nav-link">Home</a>
-                        </li>
-                        <li>
-                            <a id="navbartext" href="#section2" class="nav-link">About</a>
-                        </li>
-                        <li>
-                            <a id="navbartext" href="#section3" class="nav-link">Skills</a>
-                        </li>
-                        <li>
-                            <a id="navbartext" href="#section4" class="nav-link">My Interest</a>
-                        </li>
-                        <li>
-                            <a id="navbartext" href="#section5" class="nav-link">My Sertifikat</a>
-                        </li>
-                        <li>
-                            <a id="navbartext" href="#section6" class="nav-link">Contact</a>
-                        </li>
+                        <li><a id="navbartext" href="#section1" class="nav-link">Home</a></li>
+                        <li><a id="navbartext" href="#section2" class="nav-link">About</a></li>
+                        <li><a id="navbartext" href="#section3" class="nav-link">Skills</a></li>
+                        <li><a id="navbartext" href="#section4" class="nav-link">My Interest</a></li>
+                        <li><a id="navbartext" href="#section5" class="nav-link">My Sertifikat</a></li>
+                        <li><a id="navbartext" href="#section6" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
-            </div>   
+            </div>
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main class="bg-dark pb-3">
-        <div class="container d-flex align-items-center" id="section1">
+        <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between" id="section1">
             <div id="anim-elements">
-                <div id="anim-element">
-                    <i class='bx bxl-html5' style='color:#ffffff'></i>
-                </div>
-                <div id="anim-element">
-                    <i class='bx bxl-css3' style='color:#ffffff'></i>
-                </div>
-                <div id="anim-element">
-                    <i class='bx bxl-java' style='color:#ffffff'></i>
-                </div>
-                <div id="anim-element">
-                    <i class='bx bx-code-block' style='color:#ffffff'></i>
-                </div>
-                <div id="anim-element">
-                    <i class='bx bx-color' style='color:#ffffff'></i>
-                </div>
+                <div id="anim-element"><i class='bx bxl-html5'></i></div>
+                <div id="anim-element"><i class='bx bxl-css3'></i></div>
+                <div id="anim-element"><i class='bx bxl-java'></i></div>
+                <div id="anim-element"><i class='bx bx-code-block'></i></div>
+                <div id="anim-element"><i class='bx bx-color'></i></div>
             </div>
-            <div class="container mt-5 mb-5">
-                <img src="ikon/ADE.png" alt="fotoade" class="mt-5" style="height: 500px;">
+            <div class="text-center text-lg-start">
+                <img src="ikon/ADE.png" alt="fotoade" class="mt-5 img-fluid" style="max-height: 500px;">
             </div>
-
-            <div class="container ">
-                <h4 class="text-light">Hello, <span class="text-danger">My Name</span> is</h4>
-                <h1 class="text-light">Muhammad Ade Abdilah</h1>
-                <p class="text-light">            
-                Saya adalah seorang mahasiswa Universitas Yatsi Madani yang berasal dari Kabupaten Tangerang, Banten, Indonesia. Saya memiliki minat besar di bidang ilmu komputer dan teknologi bisnis, dengan fokus pada bagaimana teknologi dapat mendukung efisiensi operasional dan inovasi dalam dunia bisnis. Dengan latar belakang pengalaman kerja dan pendidikan yang saya miliki, saya bercita-cita untuk mengintegrasikan keahlian teknis dan strategi bisnis demi menciptakan solusi yang bermanfaat.</p>
+            <div class="text-light mt-4 mt-lg-0">
+                <h4>Hello, <span class="text-danger">My Name</span> is</h4>
+                <h1>Muhammad Ade Abdilah</h1>
+                <p>
+                    Saya adalah seorang mahasiswa Universitas Yatsi Madani yang berasal dari Kabupaten Tangerang, Banten, Indonesia. Saya memiliki minat besar di bidang ilmu komputer dan teknologi bisnis, dengan fokus pada bagaimana teknologi dapat mendukung efisiensi operasional dan inovasi dalam dunia bisnis. Dengan latar belakang pengalaman kerja dan pendidikan yang saya miliki, saya bercita-cita untuk mengintegrasikan keahlian teknis dan strategi bisnis demi menciptakan solusi yang bermanfaat.
+                </p>
             </div>
         </div>
+    </main>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
       <div class="mt-5 mb-5" id="section2">
     <div class="d-flex justify-content-center">
@@ -300,52 +271,66 @@
 </section>
 
     <div class="bg-dark text-light p-5" id="section4">
-        <div class="d-flex justify-content-center mb-5">
-            <h1 style="font-weight: bold;">MY <span class="text-danger">INTEREST</span></h1>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div id="service" class="d-flex align-items-center bg-danger">
+    <div class="d-flex justify-content-center mb-5">
+        <h1 style="font-weight: bold;">MY <span class="text-danger">INTEREST</span></h1>
+    </div>
+
+    <div class="container">
+        <div class="row g-4">
+            <!-- Web Design -->
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="d-flex align-items-center bg-danger p-3 rounded">
+                    <div class="me-3">
+                        <i class='bx bx-code-block' style='color:#000000; font-size: 2rem;'></i>
+                    </div>
                     <div>
-                        <i id="gambarservice" class='bx bx-code-block' style='color:#000000'></i>
-                    </div>
-                    <div class="text-dark">
-                        <h3>Web Design</h3>
-                        <p>Tujuan mempelajari web design adalah untuk menguasai pembuatan website yang menarik, fungsional, dan mudah digunakan, dengan fokus pada estetika, UX, dan keterampilan desain serta pengkodean.</p>
-                    </div>
-                </div>
-                <div id="service" class="d-flex align-items-center bg-danger">
-                    <div>
-                        <i id="gambarservice" class='bx bx-edit' style='color:#000000'></i>
-                    </div>
-                    <div class="text-dark">
-                        <h3>Cloud Engineer</h3>
-                        <p>fokus utamanya adalah memahami arsitektur cloud, menjaga keamanan data, mengotomatisasi proses, mengelola biaya, memantau kinerja, serta berkolaborasi dengan tim.</p>
+                        <h3 class="text-dark">Web Design</h3>
+                        <p class="text-dark">Tujuan mempelajari web design adalah untuk menguasai pembuatan website yang menarik, fungsional, dan mudah digunakan, dengan fokus pada estetika, UX, dan keterampilan desain serta pengkodean.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div id="service" class="d-flex align-items-center bg-danger">
-                    <div>
-                        <i id="gambarservice" class='bx bx-slideshow' style='color:#000000'></i>
+
+            <!-- Cloud Engineer -->
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="d-flex align-items-center bg-danger p-3 rounded">
+                    <div class="me-3">
+                        <i class='bx bx-edit' style='color:#000000; font-size: 2rem;'></i>
                     </div>
-                    <div class="text-dark">
-                        <h3>Video Editing</h3>
-                        <p>Tujuan belajar video editing adalah untuk menguasai teknik pengeditan video modern, menciptakan konten yang menarik, dinamis, dan profesional dengan penggunaan efek, transisi, serta audio yang tepat.</p>
+                    <div>
+                        <h3 class="text-dark">Cloud Engineer</h3>
+                        <p class="text-dark">Fokus utamanya adalah memahami arsitektur cloud, menjaga keamanan data, mengotomatisasi proses, mengelola biaya, memantau kinerja, serta berkolaborasi dengan tim.</p>
                     </div>
                 </div>
-                <div id="service" class="d-flex align-items-center bg-danger">
-                    <div>
-                        <i id="gambarservice" class='bx bx-cog' style='color:#000000'></i>
+            </div>
+
+            <!-- Video Editing -->
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="d-flex align-items-center bg-danger p-3 rounded">
+                    <div class="me-3">
+                        <i class='bx bx-slideshow' style='color:#000000; font-size: 2rem;'></i>
                     </div>
-                    <div class="text-dark">
-                        <h3>Linux</h3>
-                        <p>Mempelajari Linux bertujuan menguasai teknologi open source untuk meningkatkan efisiensi, mendukung infrastruktur TI modern Dan membuka peluang karier melalui sertifikasi profesional.</p>
+                    <div>
+                        <h3 class="text-dark">Video Editing</h3>
+                        <p class="text-dark">Tujuan belajar video editing adalah untuk menguasai teknik pengeditan video modern, menciptakan konten yang menarik, dinamis, dan profesional dengan penggunaan efek, transisi, serta audio yang tepat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Red Hat -->
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="d-flex align-items-center bg-danger p-3 rounded">
+                    <div class="me-3">
+                        <i class='bx bx-cog' style='color:#000000; font-size: 2rem;'></i>
+                    </div>
+                    <div>
+                        <h3 class="text-dark">Red Hat</h3>
+                        <p class="text-dark">Mempelajari Red Hat bertujuan menguasai teknologi open source untuk meningkatkan efisiensi, mendukung infrastruktur TI modern, dan membuka peluang karier melalui sertifikasi profesional.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <div id="section5" class="p-5">
         <div class="mb-5">
@@ -443,62 +428,74 @@
 </head>
 <body>
     <div class="bg-dark p-4">
-        <div class="d-flex justify-content-center mb-4">
-            <h1 class="text-light" style="font-weight: bold;">CONTACT <span class="text-warning">ME</span></h1>
-        </div>
-    
-        <!-- Compact Contact Cards -->
-        <div class="mt-4">
-            <h3 class="text-light text-center mb-3">Find Me On</h3>
-            <div class="d-flex justify-content-center gap-4 flex-wrap">
-                <!-- Instagram -->
-                <div class="card text-center bg-gradient text-light" style="width: 12rem; border: none; padding: 15px; border-radius: 10px;">
-                    <div class="card-body">
-                        <i class="fab fa-instagram fa-4x mb-2" style="color: #E1306C;"></i>
-                        <h6 class="card-title" style="font-size: 1rem; color: #E1306C;">Instagram</h6>
-                        <p class="card-text" style="font-size: 0.9rem; color: black;">@abdilhh._</p>
-                        <a href="https://www.instagram.com/" target="_blank" class="btn btn-light btn-sm w-100" style="font-family: 'Poppins', sans-serif;">Visit</a>
+        <div class="container">
+            <div class="d-flex justify-content-center mb-4">
+                <h1 class="text-light" style="font-weight: bold;">CONTACT <span class="text-warning">ME</span></h1>
+            </div>
+        
+            <!-- Compact Contact Cards -->
+            <div class="mt-4">
+                <h3 class="text-light text-center mb-3">Find Me On</h3>
+                <div class="row g-4 justify-content-center">
+                    <!-- Instagram -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card text-center bg-gradient text-light p-3 border-0 rounded">
+                            <div class="card-body">
+                                <i class="fab fa-instagram fa-4x mb-2" style="color: #E1306C;"></i>
+                                <h6 class="card-title" style="font-size: 1rem; color: #E1306C;">Instagram</h6>
+                                <p class="card-text" style="font-size: 0.9rem; color: black;">@abdilhh._</p>
+                                <a href="https://www.instagram.com/" target="_blank" class="btn btn-light btn-sm w-100">Visit</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Phone -->
-                <div class="card text-center bg-gradient text-light" style="width: 12rem; border: none; padding: 15px; border-radius: 10px;">
-                    <div class="card-body">
-                        <i class="fas fa-phone-alt fa-4x mb-2" style="color: #34b7f1;"></i>
-                        <h6 class="card-title" style="font-size: 1rem; color: #34b7f1;">Call Me</h6>
-                        <p class="card-text" style="font-size: 0.9rem; color: black;">083110062277</p>
-                        <a href="tel:+6283110062277" class="btn btn-light btn-sm w-100" style="font-family: 'Poppins', sans-serif;">Call Now</a>
+
+                    <!-- Phone -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card text-center bg-gradient text-light p-3 border-0 rounded">
+                            <div class="card-body">
+                                <i class="fas fa-phone-alt fa-4x mb-2" style="color: #34b7f1;"></i>
+                                <h6 class="card-title" style="font-size: 1rem; color: #34b7f1;">Call Me</h6>
+                                <p class="card-text" style="font-size: 0.9rem; color: black;">083110062277</p>
+                                <a href="tel:+6283110062277" class="btn btn-light btn-sm w-100">Call Now</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- YouTube -->
-                <div class="card text-center bg-gradient text-light" style="width: 12rem; border: none; padding: 15px; border-radius: 10px;">
-                    <div class="card-body">
-                        <i class="fab fa-youtube fa-4x mb-2" style="color: #FF0000;"></i>
-                        <h6 class="card-title" style="font-size: 1rem; color: #FF0000;">YouTube</h6>
-                        <p class="card-text" style="font-size: 0.9rem; color: black;">Ade Abdilah</p>
-                        <a href="https://www.youtube.com/@adeabdilah8" target="_blank" class="btn btn-light btn-sm w-100" style="font-family: 'Poppins', sans-serif;">Subscribe</a>
+
+                    <!-- YouTube -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card text-center bg-gradient text-light p-3 border-0 rounded">
+                            <div class="card-body">
+                                <i class="fab fa-youtube fa-4x mb-2" style="color: #FF0000;"></i>
+                                <h6 class="card-title" style="font-size: 1rem; color: #FF0000;">YouTube</h6>
+                                <p class="card-text" style="font-size: 0.9rem; color: black;">Ade Abdilah</p>
+                                <a href="https://www.youtube.com/@adeabdilah8" target="_blank" class="btn btn-light btn-sm w-100">Subscribe</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Email -->
-                <div class="card text-center bg-gradient text-light" style="width: 12rem; border: none; padding: 15px; border-radius: 10px;">
-                    <div class="card-body">
-                        <i class="fas fa-envelope fa-4x mb-2" style="color: #007bff;"></i>
-                        <h6 class="card-title" style="font-size: 1rem; color: #007bff;">Email</h6>
-                        <p class="card-text" style="font-size: 0.7rem; color: black;">adeabdilah8@gmail.com</p>
-                        <a href="mailto:your-email@example.com" class="btn btn-light btn-sm w-100" style="font-family: 'Poppins', sans-serif;">Send Email</a>
+
+                    <!-- Email -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card text-center bg-gradient text-light p-3 border-0 rounded">
+                            <div class="card-body">
+                                <i class="fas fa-envelope fa-4x mb-2" style="color: #007bff;"></i>
+                                <h6 class="card-title" style="font-size: 1rem; color: #007bff;">Email</h6>
+                                <p class="card-text" style="font-size: 0.7rem; color: black;">adeabdilah8@gmail.com</p>
+                                <a href="mailto:adeabdilah8@gmail.com" class="btn btn-light btn-sm w-100">Send Email</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        
+            <!-- Footer -->
+            <footer id="section6" class="mt-4">
+                <div class="d-flex justify-content-center">
+                    <p class="text-light">&copy;2024 Muhammad Ade Abdilah | Built Using Bootstrap 5 and Font Awesome</p>
+                </div>
+            </footer>
         </div>
-    
-        <!-- Footer -->
-        <footer id="section6" class="mt-4">
-            <div class="d-flex justify-content-center" id="footer">
-                <p class="text-light">&copy;2024 Muhammad Ade Abdilah | Built Using Bootstrap 5 and Font Awesome</p>
-            </div>
-        </footer>
     </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-</html>
