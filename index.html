@@ -15,6 +15,11 @@
     <meta property="og:image" content="https://adeabdilah.github.io/website-ade/ikon/ADEE.png">
     <meta property="og:url" content="https://adeabdilah.github.io/website-ade">
     <meta property="og:type" content="website">
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Website Ade Abdilah - Portofolio">
+    <meta name="twitter:description" content="Website resmi Ade Abdilah, mahasiswa Ilmu Komputer dengan portofolio dan karya terbaik.">
+    <meta name="twitter:image" content="https://adeabdilah.github.io/website-ade/ikon/ADEE.png">
     <title>Portfolio | M Ade Abdilah</title>
     <!-- Favicon -->
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -119,6 +124,12 @@
         h1, h2, h3, h4, h5, h6 {
             color: var(--heading);
             line-height: 1.25;
+        }
+
+        /* Judul section menyesuaikan lebar layar — judul panjang
+           (mis. MY EDUCATION BACKGROUND) tidak membungkus besar di HP */
+        h1 {
+            font-size: clamp(1.6rem, 6vw, 2.5rem);
         }
 
         p { color: var(--text); }
