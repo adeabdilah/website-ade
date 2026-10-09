@@ -1,0 +1,9 @@
+# Folder JDK — bukan bagian situs portfolio
+oracleJdk-27/
+
+# File uji responsif sementara
+__responsive_test.html
+
+# File sistem
+Thumbs.db
+.DS_Store
